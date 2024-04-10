@@ -1,0 +1,18 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  /* app.component.css */
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    flex-grow: 1;
+  }
+  
+.mainend{
+    width: 100%;
+}

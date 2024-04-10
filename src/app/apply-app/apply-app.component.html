@@ -1,0 +1,102 @@
+
+
+<div class="application-form m-3 p-4">
+    <form [formGroup]="registerForm">
+        <div class="row">
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Name</mat-label>
+                    <input formControlName="name" matInput placeholder="Name">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
+            
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Age</mat-label>
+                    <input type ="number" formControlName="age" matInput placeholder="age">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input type ="email" formControlName="email" matInput placeholder="email">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Mobile No</mat-label>
+                    <input type ="number" formControlName="mobile" matInput placeholder="Mobile No">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Address Line 1</mat-label>
+                    <input matInput formControlName="address1" placeholder="address">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Address Line 2</mat-label>
+                    <input matInput formControlName="address2" placeholder="address">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
+            
+            <div class="col-md-6">
+                <label id="example-radio-group-label">Trainer Preference?</label>
+                <mat-radio-group formControlName="trainerGender" class="example-radio-group" >
+                    @for (trainerOpt of trainerGender; track trainerOpt) {
+                      <mat-radio-button class="example-radio-button" [value]="trainerOpt">{{trainerOpt}}</mat-radio-button>
+                    }
+                </mat-radio-group>
+            </div>
+            <div class="col-md-6">
+                <mat-label id="example-radio-group-label">Do you need a physioTherapist?</mat-label>
+                <mat-radio-group formControlName="decision" class="example-radio-group" >
+                    @for (val of decision; track val) {
+                      <mat-radio-button class="example-radio-button" [value]="val">{{val}}</mat-radio-button>
+                    }
+                </mat-radio-group>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance ="outline">
+                    <mat-label>Which package would you like?</mat-label>
+                    <mat-select formControlName="package">
+                      
+                      @for (package of packages; track package) {
+                            <mat-option [value]="package">{{package}}</mat-option>
+                    }
+                    </mat-select>
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                    <mat-label>Weeks</mat-label>
+                    <input input="number" formControlName="weeks" matInput placeholder="Weeks">
+                    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+                    <!-- <mat-hint>Hint</mat-hint> -->
+                  </mat-form-field>
+            </div>
+            <div class="col-md-6">
+                <mat-form-field appearance="outline">
+                  <mat-label>Amount</mat-label>
+                  <input readonly formControlName="totalprice" matInput placeholder="Amount">
+                  <mat-icon matSuffix><i class="fa fa-check" aria-hidden="true"></i></mat-icon>
+                </mat-form-field>
+              </div>
+            
+        </div>
+        <button mat-raised-button mt-4 (click)="submit()" color="accent">Submit</button>
+    </form>
+</div>
