@@ -23,11 +23,12 @@ export class QueryAppComponent implements OnInit {
   }
 
   submit() {
-    if (this.queryForm.controls['name'].dirty &&this.queryForm.controls['mobile'].dirty &&this.queryForm.controls['email'].dirty &&this.queryForm.controls['message'].dirty) {
+    if (this.queryForm.controls['name'].dirty && this.queryForm.controls['mobile'].dirty &&this.queryForm.controls['email'].dirty &&this.queryForm.controls['message'].dirty) {
       console.log(this.queryForm.value);
       // Here you can handle your submission. For example, send the form data to your server.
       alert('Your message has been sent successfully!');
-    } else {
+    } 
+    else {
       alert('Please fill out all fields correctly.');
     }
   }
