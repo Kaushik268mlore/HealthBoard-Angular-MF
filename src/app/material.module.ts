@@ -13,6 +13,7 @@ import { AppRoutes } from './app.routes';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatSortModule} from '@angular/material/sort';
+import { RouterModule } from '@angular/router';
 @NgModule({
   imports: [
     MatToolbarModule,
@@ -27,6 +28,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
+    RouterModule,
   ],
   exports: [
     MatToolbarModule,
@@ -42,7 +44,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatTableModule,
     MatPaginatorModule,
     MatSortModule,
-    
+    RouterModule,
   ]
 })
 export class MaterialModule { }

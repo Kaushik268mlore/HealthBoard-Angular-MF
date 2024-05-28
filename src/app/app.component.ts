@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Router, RouterOutlet } from '@angular/router';
 import { MaterialModule } from './material.module';
 @Component({
   selector: 'app-root',
@@ -9,5 +9,18 @@ import { MaterialModule } from './material.module';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  constructor(private router: Router) { }
+  onClickApply() {
+    
+    this.router.navigate(['/apply']);
+  }
+
+  onClickEnquiry() {
+    this.router.navigate(['/enquiry']);
+  }
+
+  onClickView() {
+    this.router.navigate(['/view']);
+  }
   title = 'HEALTHBOARD';
 }

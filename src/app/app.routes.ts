@@ -6,9 +6,17 @@ import { QueryAppComponent } from './query-app/query-app.component';
 
 export const routes: Routes = [
     // { path: '', pathMatch: 'full', redirectTo: 'apply-application' },
-    {path:'apply', component:ApplyAppComponent},
-    {path:'view', component:ViewAppComponent},
-    {path:'contact',component:QueryAppComponent}
+    {path:'apply',
+     component:ApplyAppComponent
+    },
+
+    {path:'view',
+     component:ViewAppComponent
+    },
+
+    {path:'contact',
+    component:QueryAppComponent
+  }
 ];
 @NgModule({
     imports: [RouterModule.forChild(routes)],

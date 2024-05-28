@@ -1,13 +1,12 @@
-  <mat-toolbar color="primary" class="toolbar">
-    <h2>HealthClub</h2>
-    <span class="example-spacer"></span>
-    <div class="button-container">
-      <button routerLink="/apply" mat-raised-button color="warm" class="mainend">Apply for Appointments</button>
-      <button routerLink="/view" mat-raised-button color="warm" class="mainend">View Appointments</button>
-      <button routerLink="/contact" mat-raised-button color="warm" class="mainend">Contact Us</button>
-    </div>
-  </mat-toolbar>
-  
+<mat-toolbar color="primary" class="toolbar">
+  <h2>HealthBoard</h2>
+  <span class="example-spacer"></span>
+  <div class="button-container">
+    <button [routerLink]="['/apply']" mat-raised-button color="warm" class="mainend">Apply for Appointments</button>
+    <button [routerLink]="['/view']"  mat-raised-button color="warm" class="mainend">View Appointments</button>
+    <button [routerLink]="['/contact']"  mat-raised-button color="warm" class="mainend">Contact Us</button>
+  </div>
+</mat-toolbar>
   <div class="logo text-center">
     <img width="100" src="assets\ibm-thumb.png" alt="" class="src">
 </div>
